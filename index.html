@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Objętość walca</title>
+        <meta name="description" content="ObjWalca">
+        <meta name="author" content="Szymon Podgórski">
+        <link rel="stylesheet" href="css.css">  
+    </head>
+    <body>
+        
+        <div class="zadanie">
+            <h3>Zadanie</h3>
+            Oblicz objętość walca o wysokości <span class="dlugosc">H</span>, gdzie podstawa to koło o promieniu <span class="dlugosc">r</span>.
+        </div>
+        
+        <div class="daneWejsciowe">
+            <h3>Dane wejściowe</h3>
+  
+            <div class="input">H = <input type="text" id="dlugosc_H" value=5 /></div>
+            <br/>
+            <div class="input">r =<input type="text" id="dlugosc_r" value=3 /></div>
+        </div>
+        
+        <div class="rysunek">
+            <h3>Rysunek</h3>
+            <svg width="250" height="350">
+                
+                <line x1=5 y1=45 x2=5 y2=300 stroke="black" stroke-width="2" fill="none" />
+                <line x1=185 y1=45 x2=185 y2=300 stroke="black" stroke-width="2" fill="none" />
+                <line x1=95 y1=5 x2=95 y2=260 stroke="black" stroke-dasharray=5 stroke-width="2" fill="none" />
+                <ellipse cx="95" cy="45" rx="90" ry="40" style="fill:transparent;stroke:black;stroke-width:2" />
+                <ellipse cx="95" cy="300" rx="90" ry="40" style="fill:transparent;stroke:black;stroke-width:2" />
+            
+                <!-- r podstawy -->
+                <line x1=95 y1=300 x2=95 y2=340 stroke="black" stroke-width="2" fill="none" />
+                <line x1=95 y1=300 x2=185 y2=300 stroke="black" stroke-width="2" fill="none" />
+                
+                <!-- wartości -->
+                <text x=130 y=290 id="dl_r1"></text>
+                <text x=70  y=320 id="dl_r2"></text>
+                <text x=200 y=140 id="dl_h"></text>
+            </svg>
+        </div>
+
+        <div class="rozwiazanie">
+            <h3>Rozwiązanie</h3>
+            <math xmlns = "http://www.w3.org/1998/Math/MathML">
+		
+                <mrow>			
+                   <mrow>
+                    <mi>V</mi>
+                    <mo> = </mo>
+                    <mi>&pi;</mi>
+                    <mo> * </mo>
+                    <msup>
+                        <mi>r</mi>
+                        <mn>2</mn>
+                    </msup>       
+                    <mo> * </mo>
+                    <mi>H</mi>
+                    <mo>&asymp;</mo>
+                    <mi id="pk_pi"></mi>
+                    <mo> * </mo>
+                    <msup>
+                        <mi id="pk_r">r</mi>
+                        <mn>2</mn>
+                    </msup>       
+                    <mo> * </mo>
+                    <mi id="pk_H">H</mi>
+                    <mo>&asymp;</mo>
+                    <mi id="dk_pi"></mi>
+                    <mo> * </mo>
+                    <mi id="dk_r"></mi>
+                    <mo> * </mo>
+                    <mi id="dk_H"></mi>
+                    <mo>&asymp;</mo>
+                    <mi id="wynik"></mi>
+                </mrow>
+             </math>
+        </div>
+        
+
+        <script src="script.js"></script>
+
+    </body>
+</html>

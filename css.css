@@ -1,0 +1,17 @@
+.zadanie, .rozwiazanie {
+    font-size: 22;
+}
+
+.zadanie .dlugosc {
+    color: rgb(110, 233, 110);
+    font-weight: bold;
+}
+
+input {
+    float: right;
+    width: 70px;
+}
+
+.input {
+    width: 130px;
+}
